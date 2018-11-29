@@ -1,0 +1,60 @@
+@import url("https://font.googleapis.com/css/family=Matel+Sans:200,300,400,800,900");
+
+html, body{
+    font-family: 'Matel Sans', sans-serif;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    background: url('road.jpg') no-repeat 100%;
+}
+
+a{
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4.875em;
+    font-weight: 900;
+    color: #fff;
+    width: 314px;
+    height: 98px;
+    line-height: 78px;
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -157px;
+    margin-top: -39px;
+}
+
+a::before, a::after{
+    content: '';
+    position: absolute;
+    height: 7px;
+    left: 0; right: 0;
+    transform: translate(0, 30px);
+    transition: .3s all;
+    opacity: 0;
+}
+
+a::before{
+    bottom: -6px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAHBAMAAACcthkwAAAAD1BMVEUAAAD/vwD/vwD/vwD/vwBYa2Z+AAAABHRSTlMAwEAw9JyPcwAAAC1JREFUOMtjcMEETgwQwIJFTgEiRWdto64cdeWoK8l2pSAmEIZKMWKRMxgQbQCWVcU78Wj7hwAAAABJRU5ErkJggg==);
+    animation: road .9s infinite linear;
+}
+
+a::after{
+    bottom: 10px;
+    background-color: #FFBF00;
+}
+
+a:hover::before,
+a:hover::after{
+    transform: translate(0, 0px);
+    opacity: 1;
+}
+
+@keyframes road{
+    form{ background-position: 0; }
+    to{background-position: -330px; }
+}
